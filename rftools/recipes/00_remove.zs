@@ -158,3 +158,11 @@ mods.jei.JEI.removeAndHide(<rftools:timer_block>);
 // Ender Monitor
 recipes.remove(<rftools:ender_monitor>);
 mods.jei.JEI.removeAndHide(<rftools:ender_monitor>);
+
+
+/* Remove Machine Frame & Base */
+
+recipes.remove(<rftools:machine_frame>);
+mods.jei.JEI.removeAndHide(<rftools:machine_frame>);
+
+recipes.remove(<rftools:machine_base>);
