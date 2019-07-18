@@ -44,7 +44,7 @@ val outJetpacks = [<simplyjetpacks:itemjetpack:5>, <simplyjetpacks:itemjetpack:6
 for i in 0 to 8 {
     recipes.addShaped(recipeNames[i] ~ "_jetpack", outJetpacks[i],
         [
-            [plates[i] * 2, plates[i], plates[i] * 2],
+            [plates[i], plates[i], plates[i]],
             [plates[i], inJetpacks[i].marked("mark"), plates[i]],
             [plates[i], plates[i], plates[i]]
         ], 
