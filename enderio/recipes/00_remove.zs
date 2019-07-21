@@ -9,3 +9,7 @@ mods.jei.JEI.removeAndHide(<enderio:block_xp_vacuum>);
 mods.jei.JEI.removeAndHide(<enderio:block_travel_anchor>);
 mods.jei.JEI.removeAndHide(<enderio:item_material:9>);
 mods.jei.JEI.removeAndHide(<enderio:item_material:10>);
+
+// Silicon (item has no use)
+
+mods.jei.JEI.removeAndHide(<enderio:item_material:5>);
