@@ -1,5 +1,6 @@
 import mods.thermalexpansion.InductionSmelter.addRecipe as add;
 import mods.thermalexpansion.InductionSmelter.removeRecipe as rem;
+import crafttweaker.oredict.IOreDictEntry;
 
 /* Add/Change all Alloy Smelter Recipes with 2 Ingots */
 
@@ -33,7 +34,9 @@ rem(<thermalfoundation:material:96>, <thermalfoundation:material:770> * 4);
 add(<enderio:item_alloy_ingot:6>, <thermalfoundation:material:96>, <thermalfoundation:material:770> * 4, 8500);
 
 // Cake Base
-add(<enderio:item_material:70>, <ore:dustWheat> * 3, <ore:egg>, 2000);
+for wheat_dust in <ore:dustWheat>.items {
+	add(<enderio:item_material:70>, wheat_dust * 3, <ore:egg>, 2000);
+}
 
 // Soularium Ingot
 rem(<minecraft:soul_sand>, <thermalfoundation:material:1>);
@@ -45,11 +48,36 @@ add(<enderio:item_alloy_ingot:7>, <minecraft:soul_sand>, <minecraft:gold_ingot>,
 // Enlightened Fused Quartz
 add(<enderio:block_enlightened_fused_quartz>, <minecraft:quartz> * 4, <minecraft:glowstone_dust> * 4, 5000);
 add(<enderio:block_enlightened_fused_quartz>, <enderio:block_fused_quartz>, <minecraft:glowstone_dust> * 4, 3000);
-add(<enderio:block_enlightened_fused_quartz>, <ore:blockQuarz>, <minecraft:glowstone_dust> * 4, 5000);
-add(<enderio:block_enlightened_fused_quartz>, <ore:blockQuarz>, <ore:glowstone>, 5000);
-add(<enderio:block_enlightened_fused_quartz>, <minecraft:quartz> * 4, <ore:glowstone>, 5000);
-add(<enderio:block_enlightened_fused_quartz>, <enderio:block_fused_quartz>, <ore:glowstone>, 3000);
+
+for quartz_block in <ore:blockQuartz>.items {
+	add(<enderio:block_enlightened_fused_quartz>, quartz_block, <minecraft:glowstone_dust> * 4, 5000);
+	
+	for glowstone in <ore:blowstone>.items {
+		add(<enderio:block_enlightened_fused_quartz>, quartz_block, glowstone, 5000);
+	}
+}
+
+for glowstone in <ore:glowstone>.items {
+	add(<enderio:block_enlightened_fused_quartz>, <minecraft:quartz> * 4, glowstone, 5000);
+	add(<enderio:block_enlightened_fused_quartz>, <enderio:block_fused_quartz>, glowstone, 3000);
+}
 
 // Enlightened Clear Glass
-add(<enderio:block_enlightened_fused_glass>, <minecraft:glass>, <minecraft:glowstone_dust> * 4, 3500);
-add(<enderio:block_enlightened_fused_glass>, <enderio:block_fused_glass>, <minecraft:glowstone_dust> * 4, 3000);
+add(<enderio:block_enlightened_fused_glass>, <minecraft:glass>, <minecraft:glowstone_dust> * 4, 3000);
+add(<enderio:block_enlightened_fused_glass>, <enderio:block_fused_glass>, <minecraft:glowstone_dust> * 4, 1000);
+
+// Dark Fused Quarz
+for black_dye in <ore:dyeBlack>.items {
+	add(<enderio:block_dark_fused_quartz>, <minecraft:quartz> * 4, black_dye, 5000);
+
+	for quartz_block in <ore:blockQuartz>.items {
+		add(<enderio:block_dark_fused_quarz>, quartz_block, black_dye, 5000);
+	}
+	add(<enderio:block_dark_fused_quartz>, <enderio:block_fused_quartz>, black_dye, 2500);
+}
+
+// Dark Clear Glass
+for black_dye in <ore:dyeBlack>.items {
+	add(<enderio:block_dark_fused_glass>, <minecraft:glass>, black_dye * 2, 3750);
+	add(<enderio:block_dark_fused_glass>, <enderio:block_fused_glass>, black_dye * 2, 1250);
+}

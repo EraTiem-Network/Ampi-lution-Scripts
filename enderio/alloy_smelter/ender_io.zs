@@ -35,3 +35,9 @@ rem(<enderio:block_enlightened_fused_quartz>);
 
 // Enlightened Clear Glass
 rem(<enderio:block_enlightened_fused_glass>);
+
+// Dark Fused Quartz
+rem(<enderio:block_dark_fused_quartz>);
+
+// Dark Clear Glass
+rem(<enderio:block_dark_fused_glass>);
