@@ -53,3 +53,43 @@ add(<enderio:item_material:48> * 2, [<ore:dyeGreen> * 2, <ore:slimeball>, <therm
 add(<enderio:item_material:48> * 2, [<ore:dyeGreen> * 2, <ore:slimeball>, <thermalfoundation:material:769> * 2], 2000);
 add(<enderio:item_material:48>, [<ore:dyeGreen>, <ore:egg>, <thermalfoundation:material:768>], 1500);
 add(<enderio:item_material:48>, [<ore:dyeGreen>, <ore:egg>, <thermalfoundation:material:769>], 1500);
+
+// Organic Brown Dye
+rem(<enderio:item_material:49>);
+add(<enderio:item_material:49> * 2, [<ore:dyeBrown> * 2, <ore:slimeball>, <thermalfoundation:material:768> * 2], 2000);
+add(<enderio:item_material:49> * 2, [<ore:dyeBrown> * 2, <ore:slimeball>, <thermalfoundation:material:769> * 2], 2000);
+add(<enderio:item_material:49>, [<ore:dyeBrown>, <ore:egg>, <thermalfoundation:material:768>], 1500);
+add(<enderio:item_material:49>, [<ore:dyeBrown>, <ore:egg>, <thermalfoundation:material:769>], 1500);
+
+// Organic Black Dye
+rem(<enderio:item_material:50>);
+
+// Menyullyn Ingot
+rem(<tconstruct:ingots:2>);
+
+// Steel Ingot
+rem(<thermalfoundation:material:160>);
+
+// Electrum Ingot
+rem(<thermalfoundation:material:161>);
+
+// Invar Ingot
+rem(<thermalfoundation:material:162>);
+
+// Bronze Ingot
+rem(<thermalfoundation:material:163>);
+
+// Constantan Ingot
+rem(<thermalfoundation:material:164>);
+
+// Industial Machine Chassis
+rem(<enderio:item_material:1>);
+
+// Enhanced Machine Chassis
+rem(<enderio:item_material:54>);
+
+// Soul Machine Chassis
+rem(<enderio:item_material:53>);
+
+// Infinity Reagent
+rem(<enderio:item_material:75>);

@@ -85,10 +85,45 @@ for black_dye in <ore:dyeBlack>.items {
 }
 
 // Organic Green Dye
-for slime_ball in <ore:slimeball>.items {
-	add(<enderio:item_material:48> * 2, <enderio:item_material:46> * 12, slime_ball, 2000);
+for slimeball in <ore:slimeball>.items {
+	add(<enderio:item_material:48> * 2, <enderio:item_material:46> * 12, slimeball, 2000);
 }
 
 for egg in <ore:egg>.items {
 	add(<enderio:item_material:48>, <enderio:item_material:46> * 6, egg, 1500);
 }
+
+// Organic Brown Dye
+for slimeball in <ore:slimeball>.items {
+	add(<enderio:item_material:49> * 2, <enderio:item_material:47> * 12, slimeball, 2000);
+}
+
+for egg in <ore:egg>.items {
+	add(<enderio:item_material:49>, <enderio:item_material:47> * 6, egg, 1500);
+}
+
+// Organic Black Dye
+for slimeball in <ore:slimeball>.items {
+	add(<enderio:item_material:50> * 2, <thermalfoundation:material:768> * 6, slimeball, 2000);
+	add(<enderio:item_material:50> * 2, <thermalfoundation:material:769> * 6, slimeball, 2000);
+}
+
+for egg in <ore:egg>.items {
+	add(<enderio:item_material:50>, <thermalfoundation:material:768> * 3, egg, 1500);
+	add(<enderio:item_material:50>, <thermalfoundation:material:769> * 3, egg, 1500);
+}
+
+// Manyullyn Ingot
+rem(<tconstruct:ingots:1>, <tconstruct:ingots:0>);
+rem(<tconstruct:ingots:1>, <galaxyspace:ingots:0>);
+add(<tconstruct:ingots:2>, <tconstruct:ingots:1>, <tconstruct:ingots:0>, 10000);
+add(<tconstruct:ingots:2>, <tconstruct:ingots:1>, <galaxyspace:ingots:0>, 10000);
+
+// Enhanced Machine Chassis
+add(<enderio:item_material:54>, <enderio:item_material:66>, <enderio:item_material:67>, 3600);
+
+// Infinity Reagent
+add(<enderio:item_material:75>, <enderio:item_material:20>, <thermalfoundation:material:768>, 5000);
+add(<enderio:item_material:75>, <enderio:item_material:20>, <thermalfoundation:material:769>, 5000);
+
+// 
