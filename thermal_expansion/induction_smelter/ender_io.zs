@@ -21,7 +21,7 @@ add(<enderio:item_alloy_ingot:4>, <thermalfoundation:material:0>, <minecraft:red
 
 // Pulsating Iron Ingot
 rem(<minecraft:iron_ingot>, <minecraft:ender_pearl>);
-add(<enderio:item_alloy_ingot:5>, <minecraft:iron_ingot>>, <minecraft:ender_pearl>, 10000);
+add(<enderio:item_alloy_ingot:5>, <minecraft:iron_ingot>, <minecraft:ender_pearl>, 10000);
 
 rem(<thermalfoundation:material:0>, <minecraft:ender_pearl>);
 add(<enderio:item_alloy_ingot:5>, <thermalfoundation:material:0>, <minecraft:ender_pearl>, 8500);
@@ -35,7 +35,9 @@ add(<enderio:item_alloy_ingot:6>, <thermalfoundation:material:96>, <thermalfound
 
 // Cake Base
 for wheat_dust in <ore:dustWheat>.items {
-	add(<enderio:item_material:70>, wheat_dust * 3, <ore:egg>, 2000);
+	for egg in <ore:egg>.items {
+		add(<enderio:item_material:70>, wheat_dust * 3, egg, 2000);
+	}
 }
 
 // Soularium Ingot
@@ -71,7 +73,7 @@ for black_dye in <ore:dyeBlack>.items {
 	add(<enderio:block_dark_fused_quartz>, <minecraft:quartz> * 4, black_dye, 5000);
 
 	for quartz_block in <ore:blockQuartz>.items {
-		add(<enderio:block_dark_fused_quarz>, quartz_block, black_dye, 5000);
+		add(<enderio:block_dark_fused_quartz>, quartz_block, black_dye, 5000);
 	}
 	add(<enderio:block_dark_fused_quartz>, <enderio:block_fused_quartz>, black_dye, 2500);
 }
@@ -80,4 +82,13 @@ for black_dye in <ore:dyeBlack>.items {
 for black_dye in <ore:dyeBlack>.items {
 	add(<enderio:block_dark_fused_glass>, <minecraft:glass>, black_dye * 2, 3750);
 	add(<enderio:block_dark_fused_glass>, <enderio:block_fused_glass>, black_dye * 2, 1250);
+}
+
+// Organic Green Dye
+for slime_ball in <ore:slimeball>.items {
+	add(<enderio:item_material:48> * 2, <enderio:item_material:46> * 12, slime_ball, 2000);
+}
+
+for egg in <ore:egg>.items {
+	add(<enderio:item_material:48>, <enderio:item_material:46> * 6, egg, 1500);
 }

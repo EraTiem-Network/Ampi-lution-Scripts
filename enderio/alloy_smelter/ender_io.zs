@@ -1,7 +1,12 @@
 import mods.enderio.AlloySmelter.removeRecipe as rem;
 import mods.enderio.AlloySmelter.addRecipe as add;
 
-/* Remove useless items/recipes */
+/* Remove/Change useless items/recipes */
+
+// Enderium Base --> Ingot
+rem(<enderio:item_material:39>);
+rem(<thermalfoundation:material:167>);
+add(<thermalfoundation:material:167> * 4, [<thermalfoundation:material:131> * 3, <thermalfoundation:material:134>, <minecraft:ender_pearl> * 4], 50000);
 
 // Photovoltaic Plate
 rem(<enderio:item_material:3>);
@@ -41,3 +46,10 @@ rem(<enderio:block_dark_fused_quartz>);
 
 // Dark Clear Glass
 rem(<enderio:block_dark_fused_glass>);
+
+// Organic Green Dye
+rem(<enderio:item_material:48>);
+add(<enderio:item_material:48> * 2, [<ore:dyeGreen> * 2, <ore:slimeball>, <thermalfoundation:material:768> * 2], 2000);
+add(<enderio:item_material:48> * 2, [<ore:dyeGreen> * 2, <ore:slimeball>, <thermalfoundation:material:769> * 2], 2000);
+add(<enderio:item_material:48>, [<ore:dyeGreen>, <ore:egg>, <thermalfoundation:material:768>], 1500);
+add(<enderio:item_material:48>, [<ore:dyeGreen>, <ore:egg>, <thermalfoundation:material:769>], 1500);

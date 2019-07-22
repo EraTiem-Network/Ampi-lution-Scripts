@@ -10,7 +10,7 @@ hide(<enderio:block_vacuum_chest>);
 hide(<enderio:block_xp_vacuum>);
 hide(<enderio:block_travel_anchor>);
 hide(<enderio:item_material:9>);
-Hide(<enderio:item_material:10>);
+hide(<enderio:item_material:10>);
 
 // Silicon (item has no use)
 hide(<enderio:item_material:5>);
