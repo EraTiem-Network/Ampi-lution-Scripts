@@ -15,5 +15,8 @@ hide(<enderio:item_material:10>);
 // Silicon (item has no use)
 hide(<enderio:item_material:5>);
 
+// Quartz Powder
+hide(<enderio:item_material:33>);
+
 // Enderium Base (has no use)
 hide(<enderio:item_material:39>);
