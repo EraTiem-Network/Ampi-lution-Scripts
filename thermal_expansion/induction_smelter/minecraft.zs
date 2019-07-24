@@ -9,4 +9,4 @@ for sapling in <ore:treeSapling>.items {
 }
 
 // Ender Pearl
-add(<minecraft:enderpearl>, <enderio:item_material:28> * 9, 2000);
+add(<minecraft:ender_pearl>, <enderio:item_material:28> * 9, 2000);

@@ -9,6 +9,7 @@ rem(<minecraft:deadbush>);
 // Ender Pearl
 rem(<minecraft:ender_pearl>);
 
+/*
 // Gold Nugget
 rem(<minecraft:gold_nugget>);
 
@@ -23,6 +24,7 @@ rem(<minecraft:iron_ingot>);
 
 // Nether Quartz
 rem(<minecraft:quartz>);
+*/
 
 // Cookie
 rem(<minecraft:cookie>);
