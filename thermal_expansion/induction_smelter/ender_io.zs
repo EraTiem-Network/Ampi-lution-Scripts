@@ -113,12 +113,6 @@ for egg in <ore:egg>.items {
 	add(<enderio:item_material:50>, <thermalfoundation:material:769> * 3, egg, 1500);
 }
 
-// Manyullyn Ingot
-rem(<tconstruct:ingots:1>, <tconstruct:ingots:0>);
-rem(<tconstruct:ingots:1>, <galaxyspace:ingots:0>);
-add(<tconstruct:ingots:2>, <tconstruct:ingots:1>, <tconstruct:ingots:0>, 10000);
-add(<tconstruct:ingots:2>, <tconstruct:ingots:1>, <galaxyspace:ingots:0>, 10000);
-
 // Enhanced Machine Chassis
 add(<enderio:item_material:54>, <enderio:item_material:66>, <enderio:item_material:67>, 3600);
 

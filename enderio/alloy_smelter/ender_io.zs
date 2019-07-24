@@ -1,6 +1,7 @@
 import mods.enderio.AlloySmelter.removeRecipe as rem;
 import mods.enderio.AlloySmelter.addRecipe as add;
 
+
 /* Remove/Change useless items/recipes */
 
 // Enderium Base --> Ingot
@@ -10,6 +11,7 @@ add(<thermalfoundation:material:167> * 4, [<thermalfoundation:material:131> * 3,
 
 // Photovoltaic Plate
 rem(<enderio:item_material:3>);
+
 
 /* Remove all recipes with only 2 Input-Items --> Moved to Induction Smelter */
 
@@ -93,3 +95,14 @@ rem(<enderio:item_material:53>);
 
 // Infinity Reagent
 rem(<enderio:item_material:75>);
+
+
+/* Remove all recipes with only 1 ingot --> moved to furnace */
+
+// Fused Quartz
+rem(<enderio:block_fused_quartz:0>);
+
+// Quite Clear Glass
+rem(<enderio:block_fused_glass:0>);
+
+// 
