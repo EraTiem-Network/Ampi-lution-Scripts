@@ -1,5 +1,5 @@
-import mods.thermalexpansion.Compactor.addPressRecipe as add;
-import mods.thermalexpansion.Compactor.removePressRecipe as rem;
+import mods.thermalexpansion.Compactor.addStorageRecipe as add;
+import mods.thermalexpansion.Compactor.removeStorageRecipe as rem;
 import crafttweaker.item.IItemStack;
 
 /* Adjust all plate recipes to 2 inputs */
