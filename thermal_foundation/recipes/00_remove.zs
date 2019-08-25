@@ -1,8 +1,5 @@
 /* Gears */
 
-// All Recipes
-mods.unidict.removalByKind.get("Crafting").remove("gear");
-
 // Diamond
 recipes.remove(<thermalfoundation:material:26>);
 
