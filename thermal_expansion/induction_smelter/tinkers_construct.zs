@@ -6,6 +6,4 @@ import mods.thermalexpansion.InductionSmelter.removeRecipe as rem;
 
 // Manyullyn Ingot
 rem(<tconstruct:ingots:1>, <tconstruct:ingots:0>);
-rem(<tconstruct:ingots:1>, <galaxyspace:ingots:0>);
 add(<tconstruct:ingots:2>, <tconstruct:ingots:1>, <tconstruct:ingots:0>, 10000);
-add(<tconstruct:ingots:2>, <tconstruct:ingots:1>, <galaxyspace:ingots:0>, 10000);
