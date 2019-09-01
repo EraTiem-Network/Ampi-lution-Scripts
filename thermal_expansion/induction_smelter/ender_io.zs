@@ -9,7 +9,7 @@ rem(<enderio:item_alloy_ingot:1>, <minecraft:ender_pearl>);
 add(<enderio:item_alloy_ingot:2>, <enderio:item_alloy_ingot:1>, <minecraft:ender_pearl>, 10000);
 
 // Redstone Alloy Ingot
-add(<enderio:item_alloy_ingot:3>, <minecraft:redstone>, <galacticraftcore:basic_item:2>, 10000);
+add(<enderio:item_alloy_ingot:3>, <minecraft:redstone>, <appliedenergistics2:material:5>, 10000);
 
 // Conductive Iron Ingot
 rem(<minecraft:iron_ingot>, <minecraft:redstone>);
