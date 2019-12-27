@@ -16,7 +16,7 @@ add(<galaxyspace:gs_basic:15>, <galaxyspace:gsores:2>, 4000);
 /* Mars */
 
 // Silicon Ore
-add(<galacticraftcore:basic_item:2> * 4, <galaxyspace:marsores:4>, 4000);
+add(<appliedenergistics2:material:5> * 4, <galaxyspace:marsores:4>, 4000);
 
 
 /* Ceres */
@@ -37,7 +37,7 @@ add(<galaxyspace:gs_basic:12>, <galaxyspace:ioblocks:5>, 4000);
 /* Europa */
 
 // Silicon Ore
-add(<galacticraftcore:basic_item:2> * 4, <galaxyspace:europablocks:4>, 4000);
+add(<appliedenergistics2:material:5> * 4, <galaxyspace:europablocks:4>, 4000);
 
 
 /* Ganymede */

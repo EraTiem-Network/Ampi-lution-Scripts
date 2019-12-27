@@ -9,7 +9,7 @@ add(<galacticraftcore:meteoric_iron_raw> * 2, <galacticraftcore:fallen_meteor>, 
 /* Overworld */
 
 // Silicon Ore
-add(<galacticraftcore:basic_item:2> * 4, <galacticraftcore:basic_block_core:8>, 4000);
+add(<appliedenergistics2:material:5> * 4, <galacticraftcore:basic_block_core:8>, 4000);
 
 
 /* Moon */
@@ -30,7 +30,7 @@ add(<galacticraftplanets:item_basic_mars:0> * 2, <galacticraftplanets:mars:2>, 4
 /* Venus */
 
 // Silicon Ore
-add(<galacticraftcore:basic_item:2> * 4, <galacticraftplanets:venus:10>, 4000);
+add(<appliedenergistics2:material:5> * 4, <galacticraftplanets:venus:10>, 4000);
 
 // Solar Ore
 add(<galacticraftplanets:basic_item_venus:4>, <galacticraftplanets:venus:13>, 4000);
