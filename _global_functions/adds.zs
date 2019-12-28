@@ -1,5 +1,8 @@
+import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import mods.appliedenergistics2.Inscriber;
+import mods.enderio.AlloySmelter;
+import mods.enderio.SliceNSplice;
 import mods.GalacticraftTweaker as GC;
 import mods.thermalexpansion.Compactor;
 import mods.thermalexpansion.InductionSmelter;
@@ -10,13 +13,30 @@ import mods.thermalexpansion.InductionSmelter;
 // Crafting Table
 
 // Furnace
-global addFur as function(IItemStack, IItemStack)void = function (out as IItemStack, in_a as IItemStack) as void {
-	furnace.addRecipe(out, in_a);	
+global addFur as function(IItemStack, IItemStack)void = function (out as IItemStack, inp as IItemStack) as void {
+	furnace.addRecipe(out, inp);	
 };
 
-/* Thermal Expansion */
 
-// Compactor
+/* Applied Energistics 2 */
+
+// Inscriber
+global addIns as function(IItemStack, IItemStack, bool, IItemStack)void = function (in1 as IItemStack, in2 as IItemStack, consumeAll as bool, out as IItemStack) as void {
+	Inscriber.addRecipe(in1, in2, consumeAll, out);	
+};
+
+
+/* Ender IO */
+
+// Alloy Smelter
+global addEnderAlSm as function(IItemStack, IIngredient[], int, float)void = function (out as IItemStack, ins as IIngredient[], energy as int, xp as float) as void {
+	AlloySmelter.addRecipe(out, ins, energy, xp);
+};
+
+// Slice'N'Splice
+global addEnderSNS as function(IItemStack, IIngredient[], int, float)void = function (out as IItemStack, ins as IIngredient[], energy as int, xp as float) as void {
+	SliceNSplice.addRecipe(out, ins, energy, xp);
+};
 
 
 /* Galacticraft */
@@ -27,9 +47,14 @@ global addCiFa as function(IItemStack, IItemStack, IItemStack, IItemStack, IItem
 };
 
 
-/* Applied Energistics 2 */
+/* Thermal Expansion */
 
-// Inscriber
-global addIns as function(IItemStack, IItemStack, bool, IItemStack)void = function (in1 as IItemStack, in2 as IItemStack, consumeAll as bool, out as IItemStack) as void {
-	Inscriber.addRecipe(in1, in2, consumeAll, out);	
+// Compactor
+global addTECom as function(IItemStack, IItemStack, int)void = function (out as IItemStack, inp as IItemStack, energy as int) as void {
+	Compactor.addStorageRecipe(out, inp, energy);
+};
+
+// Induction Smelter
+global addTEInSm as function(IItemStack, IItemStack, IItemStack, int)void = function (out1 as IItemStack, in1 as IItemStack, in2 as IItemStack, energy as int) as void {
+	InductionSmelter.addRecipe(out1, in1, in2, energy);
 };

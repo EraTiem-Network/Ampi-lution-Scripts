@@ -1,5 +1,7 @@
 import crafttweaker.item.IItemStack;
 import mods.appliedenergistics2.Inscriber;
+import mods.enderio.AlloySmelter;
+import mods.enderio.SliceNSplice;
 import mods.GalacticraftTweaker as GC;
 import mods.thermalexpansion.Compactor;
 import mods.thermalexpansion.InductionSmelter;
@@ -17,9 +19,33 @@ global remNBT as function(IItemStack)void = function(item as IItemStack) as void
 	recipes.remove(item, true);
 };
 
-// Furnace
-global remFur as function(IItemStack)void = function(item as IItemStack) as void {
-	furnace.remove(item);
+
+/* Applied Energistics 2 */
+
+// Inscriber
+global remIns as function(IItemStack)void = function (out as IItemStack) as void {
+	Inscriber.removeRecipe(out);
+};
+
+
+/* Ender IO */
+
+// Alloy Smelter
+global remEnderAlSm as function(IItemStack)void = function (out as IItemStack) as void {
+	AlloySmelter.removeRecipe(out);
+};
+
+// Slice'N'Splice
+global remEnderSNS as function(IItemStack)void = function (out as IItemStack) as void {
+	SliceNSplice.removeRecipe(out);	
+};
+
+
+/* Galacticraft */
+
+// Circuit Fabricator
+global remCiFa as function(IItemStack)void = function (item as IItemStack) as void {
+	GC.removeCircuitFabricatorRecipe(item);	
 };
 
 
@@ -50,18 +76,7 @@ global remTEInSm as function(IItemStack, IItemStack)void = function (item1 as II
 	InductionSmelter.removeRecipe(item1, item2);
 };
 
-
-/* Galacticraft */
-
-// Circuit Fabricator
-global remCiFa as function(IItemStack)void = function (item as IItemStack) as void {
-	GC.removeCircuitFabricatorRecipe(item);	
-};
-
-
-/* Applied Energistics 2 */
-
-// Inscriber
-global remIns as function(IItemStack)void = function (out as IItemStack) as void {
-	Inscriber.removeRecipe(out);
+// Furnace
+global remFur as function(IItemStack)void = function(item as IItemStack) as void {
+	furnace.remove(item);
 };
