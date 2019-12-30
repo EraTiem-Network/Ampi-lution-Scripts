@@ -1,6 +1,7 @@
 import crafttweaker.item.IItemStack;
 import mods.appliedenergistics2.Inscriber;
 import mods.enderio.AlloySmelter;
+import mods.enderio.SagMill;
 import mods.enderio.SliceNSplice;
 import mods.GalacticraftTweaker as GC;
 import mods.thermalexpansion.Compactor;
@@ -19,6 +20,11 @@ global remNBT as function(IItemStack)void = function(item as IItemStack) as void
 	recipes.remove(item, true);
 };
 
+// Crafting Table by Name
+global remByName as function(string)void = function(name as string) as void {
+	recipes.removeByRecipeName(name);
+};
+
 
 /* Applied Energistics 2 */
 
@@ -33,6 +39,11 @@ global remIns as function(IItemStack)void = function (out as IItemStack) as void
 // Alloy Smelter
 global remEnderAlSm as function(IItemStack)void = function (out as IItemStack) as void {
 	AlloySmelter.removeRecipe(out);
+};
+
+// SAG Mill
+global remEnderSAG as function(IItemStack)void = function (out as IItemStack) as void {
+	SagMill.removeRecipe(out);
 };
 
 // Slice'N'Splice

@@ -1,6 +1,7 @@
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import mods.appliedenergistics2.Inscriber;
+import mods.chisel.Carving;
 import mods.enderio.AlloySmelter;
 import mods.enderio.SliceNSplice;
 import mods.GalacticraftTweaker as GC;
@@ -26,6 +27,13 @@ global addIns as function(IItemStack, IItemStack, bool, IItemStack)void = functi
 };
 
 
+/* Chisel */
+
+// Variation
+
+global addChiselVar as function(string, IItemStack)void = function (group as string, item as IItemStack) as void {
+	Carving.addVariation(group, item);
+};
 /* Ender IO */
 
 // Alloy Smelter
