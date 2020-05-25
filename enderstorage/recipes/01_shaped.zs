@@ -17,9 +17,9 @@ for i in 0 to 16 {
 /* Chest */
 
     recipes.addShaped("ender_chest_" ~ recipeNames[i], <enderstorage:ender_storage:0>.withTag({Frequency: {middle: i, left: i, right: i}}), [
-        [<aether_legacy:ambrosium_shard> * 6, oreDictWool[i], <aether_legacy:ambrosium_shard> * 6],
+        [<extrautils2:suncrystal:0>, oreDictWool[i], <extrautils2:suncrystal:0>],
         [<ironchest:iron_chest:6>, <minecraft:ender_chest>, <ironchest:iron_chest:6>],
-        [<appliedenergistics2:material:22> * 6, <minecraft:ender_eye>, <appliedenergistics2:material:22> * 6]
+        [<appliedenergistics2:material:22>, <minecraft:ender_eye>, <appliedenergistics2:material:22>]
     ]);
 
 
@@ -27,9 +27,9 @@ for i in 0 to 16 {
 /* Tank */
 
     recipes.addShaped("ender_tank_" ~ recipeNames[i], <enderstorage:ender_storage:1>.withTag({Frequency: {middle: i, left: i, right: i}}), [
-        [<aether_legacy:ambrosium_shard> * 6, oreDictWool[i], <aether_legacy:ambrosium_shard> * 6],
+        [<extrautils2:suncrystal:0>, oreDictWool[i], <extrautils2:suncrystal:0>],
         [<ironchest:iron_chest:6>, <industrialforegoing:black_hole_tank>, <ironchest:iron_chest:6>],
-        [<appliedenergistics2:material:22> * 6, <minecraft:ender_eye>, <appliedenergistics2:material:22> * 6]
+        [<appliedenergistics2:material:22>, <minecraft:ender_eye>, <appliedenergistics2:material:22>]
     ]);
 
 
@@ -37,9 +37,9 @@ for i in 0 to 16 {
 /* Pouch */
     
     recipes.addShaped("ender_pouch_" ~ recipeNames[i], <enderstorage:ender_pouch>.withTag({Frequency: {middle: i, left: i, right: i}}), [
-        [<minecraft:blaze_rod> * 4, <minecraft:ender_eye> * 2, <minecraft:blaze_rod> * 4],
-        [<minecraft:leather> * 3, <ironchest:iron_chest:6>, <minecraft:leather> * 3],
-        [<minecraft:blaze_rod> * 4, oreDictWool[i], <minecraft:blaze_rod> * 4]
+        [<minecraft:blaze_rod>, <minecraft:ender_eye> * 2, <minecraft:blaze_rod>],
+        [<minecraft:leather>, <ironchest:iron_chest:6>, <minecraft:leather>],
+        [<minecraft:blaze_rod> , oreDictWool[i], <minecraft:blaze_rod>]
     ]);
 
 }
