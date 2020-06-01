@@ -21,7 +21,7 @@ for i in items {
 <ore:ingotCobalt>.remove(<galaxyspace:ingots:0>);
 
 
-// Remove, add to Chisel and Rename
+// Remove/Add Recipes
 rem(<galaxyspace:decoblocks:4>);
 <ore:blockCobalt>.add(<galaxyspace:decoblocks:4>);
 remByName("chisel:uncraft_blockcobalt");

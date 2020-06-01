@@ -13,6 +13,10 @@ import mods.thermalexpansion.InductionSmelter;
 
 // Crafting Table
 
+global addShaped as function(string, IItemStack, IIngredient[][])void = function (name as string, out as IItemStack, inp as IIngredient[][]) as void {
+	recipes.addShaped(name, out, inp);
+};
+
 // Furnace
 global addFur as function(IItemStack, IItemStack)void = function (out as IItemStack, inp as IItemStack) as void {
 	furnace.addRecipe(out, inp);	

@@ -1,4 +1,6 @@
 import crafttweaker.item.IItemStack;
+import crafttweaker.item.IIngredient;
+import mods.appliedenergistics2.Grinder;
 import mods.appliedenergistics2.Inscriber;
 import mods.enderio.AlloySmelter;
 import mods.enderio.SagMill;
@@ -25,8 +27,33 @@ global remByName as function(string)void = function(name as string) as void {
 	recipes.removeByRecipeName(name);
 };
 
+// Crafting Table Shaped
+global remShaped as function(IIngredient, IIngredient[][])void = function(out as IIngredient, inp as IIngredient[][]) as void {
+	recipes.removeShaped(out, inp);
+};
+
+// Crafting Table Shapless
+global remShapeless as function(IIngredient, IIngredient[])void = function(out as IIngredient, inp as IIngredient[]) as void {
+	recipes.removeShapeless(out, inp);
+};
+
+// Furnace
+global remFur as function(IItemStack)void = function(item as IItemStack) as void {
+	furnace.remove(item);
+};
+
+// Furnace with Input
+global remFurIn as function(IItemStack, IItemStack)void = function(out as IItemStack, inp as IItemStack) as void {
+	furnace.remove(out, inp);
+};
+
 
 /* Applied Energistics 2 */
+
+// Grinder
+global remAE2Gri as function(IItemStack)void = function (inp as IItemStack) as void {
+	Grinder.removeRecipe(inp);
+};
 
 // Inscriber
 global remIns as function(IItemStack)void = function (out as IItemStack) as void {
@@ -85,9 +112,4 @@ global remTECom as function(IItemStack)void = function (item as IItemStack) as v
 // Induction Smelter
 global remTEInSm as function(IItemStack, IItemStack)void = function (item1 as IItemStack, item2 as IItemStack) as void {
 	InductionSmelter.removeRecipe(item1, item2);
-};
-
-// Furnace
-global remFur as function(IItemStack)void = function(item as IItemStack) as void {
-	furnace.remove(item);
 };
