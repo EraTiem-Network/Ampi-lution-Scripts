@@ -38,8 +38,8 @@ global remShapeless as function(IIngredient, IIngredient[])void = function(out a
 };
 
 // Furnace
-global remFur as function(IItemStack)void = function(item as IItemStack) as void {
-	furnace.remove(item);
+global remFur as function(IItemStack)void = function(output as IItemStack) as void {
+	furnace.remove(output);
 };
 
 // Furnace with Input
@@ -82,8 +82,13 @@ global remEnderSNS as function(IItemStack)void = function (out as IItemStack) as
 /* Galacticraft */
 
 // Circuit Fabricator
-global remCiFa as function(IItemStack)void = function (item as IItemStack) as void {
-	GC.removeCircuitFabricatorRecipe(item);	
+global remCiFa as function(IItemStack)void = function (output as IItemStack) as void {
+	GC.removeCircuitFabricatorRecipe(output);
+};
+
+// Compressor
+global remGalaComp as function(IItemStack)void = function (output as IItemStack) as void {
+	GC.removeCompressorRecipe(output);
 };
 
 

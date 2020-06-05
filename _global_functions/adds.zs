@@ -18,8 +18,8 @@ global addShaped as function(string, IItemStack, IIngredient[][])void = function
 };
 
 // Furnace
-global addFur as function(IItemStack, IItemStack)void = function (out as IItemStack, inp as IItemStack) as void {
-	furnace.addRecipe(out, inp);	
+global addFur as function(IItemStack, IItemStack)void = function (output as IItemStack, input as IItemStack) as void {
+	furnace.addRecipe(output, input);	
 };
 
 
