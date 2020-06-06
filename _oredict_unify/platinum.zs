@@ -1,8 +1,5 @@
 import crafttweaker.oredict.IOreDictEntry;
-import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
-import crafttweaker.events.IEventManager;
-import crafttweaker.block.IBlock;
 
 // remove from OreDict and ingot recipes
 <ore:ingotPlatinum>.remove(<extraplanets:tier11_items:5>);
