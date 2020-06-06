@@ -1,6 +1,7 @@
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import mods.appliedenergistics2.Inscriber;
+import mods.appliedenergistics2.Grinder;
 import mods.chisel.Carving;
 import mods.enderio.AlloySmelter;
 import mods.enderio.SliceNSplice;
@@ -28,6 +29,11 @@ global addFur as function(IItemStack, IItemStack)void = function (output as IIte
 // Inscriber
 global addIns as function(IItemStack, IItemStack, bool, IItemStack)void = function (in1 as IItemStack, in2 as IItemStack, consumeAll as bool, out as IItemStack) as void {
 	Inscriber.addRecipe(in1, in2, consumeAll, out);	
+};
+
+// Grindstone
+global addAE2Gri as function(IItemStack, IItemStack, int)void = function (output1 as IItemStack, input as IItemStack, turns as int) as void {
+	Grinder.addRecipe(output1, input, turns);
 };
 
 
@@ -61,6 +67,9 @@ global addCiFa as function(IItemStack, IItemStack, IItemStack, IItemStack, IItem
 // Compressor
 global addGalaComp2 as function(IItemStack, IItemStack, IItemStack)void = function (out as IItemStack, in1 as IItemStack, in2 as IItemStack) as void {
 	GC.addCompressorShapelessRecipe(out, in1, in2);
+};
+global addGalaComp6Inp as function(IItemStack, IItemStack, IItemStack, IItemStack, IItemStack, IItemStack, IItemStack)void = function (out as IItemStack, in1 as IItemStack, in2 as IItemStack, in3 as IItemStack, in4 as IItemStack, in5 as IItemStack, in6 as IItemStack) as void {
+	GC.addCompressorShapelessRecipe(out, in1, in2, in3, in4, in5, in6);
 };
 
 
