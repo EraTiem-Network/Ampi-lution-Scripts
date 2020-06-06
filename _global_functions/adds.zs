@@ -58,6 +58,11 @@ global addCiFa as function(IItemStack, IItemStack, IItemStack, IItemStack, IItem
 	GC.addCircuitFabricatorRecipe(out, in1, in2, in3, in4, in5);
 };
 
+// Compressor
+global addGalaComp2 as function(IItemStack, IItemStack, IItemStack)void = function (out as IItemStack, in1 as IItemStack, in2 as IItemStack) as void {
+	GC.addCompressorShapelessRecipe(out, in1, in2);
+};
+
 
 /* Thermal Expansion */
 

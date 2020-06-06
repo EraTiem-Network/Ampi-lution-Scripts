@@ -31,8 +31,6 @@ addChiselVar("blockMagnesium", <galaxyspace:decoblocks:6>);
 
 
 /* Plates */
-
-//switch plates
 <ore:plateMagnesium>.add(<extraplanets:tier6_items:4>);
 <ore:plateMagnesium>.remove(<galaxyspace:compressed_plates:2>);
 remGalaComp(<galaxyspace:compressed_plates:2>);

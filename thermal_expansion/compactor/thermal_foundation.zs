@@ -33,7 +33,7 @@ val outputs = [
 <thermalfoundation:material:323>,
 <thermalfoundation:material:324>,
 <thermalfoundation:material:325>,
-<thermalfoundation:material:326>,
+<extraplanets:tier11_items:6>,
 <thermalfoundation:material:327>,
 <thermalfoundation:material:328>,
 <thermalfoundation:material:352>,
