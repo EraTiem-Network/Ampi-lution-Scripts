@@ -2,6 +2,7 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import mods.appliedenergistics2.Inscriber;
 import mods.appliedenergistics2.Grinder;
+import mods.avaritia.ExtremeCrafting;
 import mods.chisel.Carving;
 import mods.enderio.AlloySmelter;
 import mods.enderio.SliceNSplice;
@@ -34,6 +35,14 @@ global addIns as function(IItemStack, IItemStack, bool, IItemStack)void = functi
 // Grindstone
 global addAE2Gri as function(IItemStack, IItemStack, int)void = function (output1 as IItemStack, input as IItemStack, turns as int) as void {
 	Grinder.addRecipe(output1, input, turns);
+};
+
+
+/* Avaritia */
+
+// Xtreme Crafting Table Shapeless
+global addAvaXtrShapeless as function(string, IItemStack, IIngredient[])void = function (name as string, output as IItemStack, inputs as IIngredient[]) as void {
+	ExtremeCrafting.addShapeless(name, output, inputs);
 };
 
 

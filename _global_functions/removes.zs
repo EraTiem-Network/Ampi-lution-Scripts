@@ -2,9 +2,12 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 import mods.appliedenergistics2.Grinder;
 import mods.appliedenergistics2.Inscriber;
+import mods.avaritia.ExtremeCrafting;
+import mods.avaritia.Compressor;
 import mods.enderio.AlloySmelter;
 import mods.enderio.SagMill;
 import mods.enderio.SliceNSplice;
+import mods.jei.JEI;
 import mods.GalacticraftTweaker as GC;
 import mods.thermalexpansion.Compactor;
 import mods.thermalexpansion.InductionSmelter;
@@ -61,6 +64,20 @@ global remIns as function(IItemStack)void = function (out as IItemStack) as void
 };
 
 
+
+/* Avaritia */
+
+// Neutronium Compressor
+global remAvaComp as function(IItemStack)void = function (output as IItemStack) as void {
+	Compressor.remove(output);
+};
+
+// Xtreme Crafting Table
+global remAvaXtr as function(IItemStack)void = function (output as IItemStack) as void {
+	ExtremeCrafting.remove(output);
+};
+
+
 /* Ender IO */
 
 // Alloy Smelter
@@ -97,13 +114,13 @@ global remGalaComp as function(IItemStack)void = function (output as IItemStack)
 // Remove and hide without NBT
 global remAndHide as function(IItemStack)void = function (item as IItemStack) as void {
 	rem(item);
-	mods.jei.JEI.removeAndHide(item);
+	JEI.removeAndHide(item);
 };
 
 // Remove and hide with NBT
 global remAndHideNBT as function(IItemStack)void = function(item as IItemStack) as void {
 	remNBT(item);
-	mods.jei.JEI.removeAndHide(item, true);
+	JEI.removeAndHide(item, true);
 };
 
 
