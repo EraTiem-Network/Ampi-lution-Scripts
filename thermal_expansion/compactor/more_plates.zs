@@ -34,8 +34,6 @@ val inputs = [
 <minecraft:dye:4>,
 <minecraft:quartz>,
 <minecraft:redstone>,
-<projecte:item.pe_matter:0>,
-<projecte:item.pe_matter:1>,
 <tconstruct:ingots:1>,
 <tconstruct:ingots:0>,
 <tconstruct:ingots:3>,
@@ -70,15 +68,13 @@ val outputs = [
 <moreplates:lapis_lazuli_plate>,
 <moreplates:nether_quartz_plate>,
 <moreplates:redstone_plate>,
-<moreplates:dark_matter_plate>,
-<moreplates:red_matter_plate>,
 <moreplates:ardite_plate>,
 <moreplates:cobalt_plate>,
 <moreplates:knightslime_plate>,
 <moreplates:manyullyn_plate>,
 <moreplates:pig_iron_plate>] as IItemStack[];
 
-for i in 0 to 33 {
+for i in 0 to 31 {
 	remTECom(inputs[i]);
 	add(outputs[i], inputs[i] * 2, 6000);
 }
