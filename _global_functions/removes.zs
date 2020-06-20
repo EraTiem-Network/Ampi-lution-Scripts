@@ -1,5 +1,5 @@
-import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
+import crafttweaker.item.IItemStack;
 import mods.appliedenergistics2.Grinder;
 import mods.appliedenergistics2.Inscriber;
 import mods.avaritia.ExtremeCrafting;
@@ -64,7 +64,6 @@ global remIns as function(IItemStack)void = function (out as IItemStack) as void
 };
 
 
-
 /* Avaritia */
 
 // Neutronium Compressor
@@ -114,7 +113,7 @@ global remGalaComp as function(IItemStack)void = function (output as IItemStack)
 // Remove and hide without NBT
 global remAndHide as function(IItemStack)void = function (item as IItemStack) as void {
 	rem(item);
-	JEI.removeAndHide(item);
+	JEI.hide(item);
 };
 
 // Remove and hide with NBT
