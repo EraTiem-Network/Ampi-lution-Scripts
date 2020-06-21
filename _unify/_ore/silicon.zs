@@ -4,7 +4,7 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.events.IEventManager;
 import crafttweaker.block.IBlock;
 
-// Remove GC from OreDict
+// Remove GC and EIO from OreDict
 <ore:itemSilicon>.remove(<galacticraftcore:basic_item:2>);
 <ore:itemSilicon>.remove(<enderio:item_material:5>);
 
@@ -88,5 +88,6 @@ events.onBlockHarvestDrops(function(event as crafttweaker.event.BlockHarvestDrop
 	}
 });
 
-
+// Remove Other Silicons
 remAndHide(<galacticraftcore:basic_item:2>);
+remAndHide(<simplyjetpacks:metaitemmods:12>);

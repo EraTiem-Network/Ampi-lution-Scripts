@@ -1,3 +1,6 @@
+import crafttweaker.item.IItemStack;
+
+
 /* Armor Platings */
 
 // Bronze

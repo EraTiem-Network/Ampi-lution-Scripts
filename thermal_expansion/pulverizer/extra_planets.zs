@@ -1,8 +1,8 @@
-import mods.thermalexpansion.Pulverizer.addRecipe as add;
+import crafttweaker.item.IItemStack;
 
 /* Kepler 22b */
 
-// dense coal ore
-add(<minecraft:coal> * 9, <extraplanets:kepler22b:5>, 4000);
+// Dense Coal Ore
+addTEPulv(<minecraft:coal> * 9, <extraplanets:kepler22b:5>, 4000);
 
 

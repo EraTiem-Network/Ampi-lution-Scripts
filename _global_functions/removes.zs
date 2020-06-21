@@ -30,6 +30,11 @@ global remByName as function(string)void = function(name as string) as void {
 	recipes.removeByRecipeName(name);
 };
 
+// Crafting Table by Mod
+global remByMod as function(string)void = function(name as string) as void {
+	recipes.removeByMod(name);
+};
+
 // Crafting Table Shaped
 global remShaped as function(IIngredient, IIngredient[][])void = function(out as IIngredient, inp as IIngredient[][]) as void {
 	recipes.removeShaped(out, inp);
@@ -126,7 +131,7 @@ global remAndHideNBT as function(IItemStack)void = function(item as IItemStack) 
 /* Thermal Expansion */
 
 // Compactor
-global remTECom as function(IItemStack)void = function (item as IItemStack) as void {
+global remTEComp as function(IItemStack)void = function (item as IItemStack) as void {
 	Compactor.removeStorageRecipe(item);
 };
 

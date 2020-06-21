@@ -31,6 +31,11 @@ remAndHide(<galaxyspace:ingots:0>);
 // Remove SAG Mill recipe
 remEnderSAG(<galaxyspace:gsores:0>);
 
-// Replace all Ingots
 
-recipes.replaceAllOccurences(<galaxyspace:ingots:0>, <tconstruct:ingots:0>);
+/* Ingot */
+
+// Remove GalaxySpace Ingot from Furnace
+remFur(<galaxyspace:ingots:0>);
+
+// Replace all Ingots
+replAll(<galaxyspace:ingots:0>, <tconstruct:ingots:0>);

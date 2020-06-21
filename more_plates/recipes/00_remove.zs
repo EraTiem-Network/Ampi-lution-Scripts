@@ -1,3 +1,0 @@
-/* all */
-
-recipes.removeByMod("moreplates");

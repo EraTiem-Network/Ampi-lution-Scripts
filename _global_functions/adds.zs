@@ -9,19 +9,35 @@ import mods.enderio.SliceNSplice;
 import mods.GalacticraftTweaker as GC;
 import mods.thermalexpansion.Compactor;
 import mods.thermalexpansion.InductionSmelter;
+import mods.thermalexpansion.Pulverizer;
+import mods.thermalexpansion.RedstoneFurnace;
 
 
 /* Vanilla */
 
-// Crafting Table
-
+// Crafting Table Shaped
 global addShaped as function(string, IItemStack, IIngredient[][])void = function (name as string, out as IItemStack, inp as IIngredient[][]) as void {
 	recipes.addShaped(name, out, inp);
+};
+
+// Crafting Table Shaped with Function and Action
+global addShapedFunc as function(string, IItemStack, IIngredient[][], IRecipeFunction, IRecipeAction)void = function (name as string, output as IItemStack, input as IIngredient[][], func as IRecipeFuction, act as IRecipeAction) as void {
+	recipes.addShaped(name, out, inp, func, act);
+};
+
+// Crafting Table Shapeless
+global addShapeless as function(string, IItemStack, IIngredient[])void = function (name as string, out as IItemStack, inp as IIngredient[]) as void {
+	recipes.addShapeless(name, out, inp);
 };
 
 // Furnace
 global addFur as function(IItemStack, IItemStack)void = function (output as IItemStack, input as IItemStack) as void {
 	furnace.addRecipe(output, input);	
+};
+
+// Furnace Fuel
+global addFurFuel as function(IItemStack, int)void = function (input as IItemStack, burnTime as int) as void {
+	furnace.setFuel(input, int);
 };
 
 
@@ -85,11 +101,21 @@ global addGalaComp6Inp as function(IItemStack, IItemStack, IItemStack, IItemStac
 /* Thermal Expansion */
 
 // Compactor
-global addTECom as function(IItemStack, IItemStack, int)void = function (out as IItemStack, inp as IItemStack, energy as int) as void {
+global addTEComp as function(IItemStack, IItemStack, int)void = function (out as IItemStack, inp as IItemStack, energy as int) as void {
 	Compactor.addStorageRecipe(out, inp, energy);
 };
 
 // Induction Smelter
 global addTEInSm as function(IItemStack, IItemStack, IItemStack, int)void = function (out1 as IItemStack, in1 as IItemStack, in2 as IItemStack, energy as int) as void {
 	InductionSmelter.addRecipe(out1, in1, in2, energy);
+};
+
+// Pulverizer
+global addTEPulv as function(IItemStack, IItemStack, int)void = function (output as IItemStack, input as IItemStack, energy as int) as void {
+	Pulverizer.addRecipe(output, input, energy);	
+};
+
+// Redstone Furnace
+global addTERedFur as function(IItemStack, IItemStack, int)void = function (output as IItemStack, input as IItemStack, energy as int) as void {
+	RedstoneFurnace.addRecipe(output, intput, energy);
 };

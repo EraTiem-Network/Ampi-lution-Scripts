@@ -1,8 +1,8 @@
-import mods.thermalexpansion.InductionSmelter.addRecipe as add;
+import crafttweaker.item.IItemStack;
 
 
 /* Add/Adjust Recipes */
 
 // Manyullyn Ingot
 remTEInSm(<tconstruct:ingots:1>, <tconstruct:ingots:0>);
-add(<tconstruct:ingots:2>, <tconstruct:ingots:1>, <tconstruct:ingots:0>, 10000);
+addTEInSm(<tconstruct:ingots:2>, <tconstruct:ingots:1>, <tconstruct:ingots:0>, 10000);

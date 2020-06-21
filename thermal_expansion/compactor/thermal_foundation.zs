@@ -1,4 +1,3 @@
-import mods.thermalexpansion.Compactor.addStorageRecipe as add;
 import crafttweaker.item.IItemStack;
 
 /* Adjust all plate recipes to 2 inputs */
@@ -46,6 +45,6 @@ val outputs = [
 <thermalfoundation:material:359>] as IItemStack[];
 
 for i in 0 to 18 {
-	remTECom(inputs[i]);
-	add(outputs[i], inputs[i] * 2, 6000);
+	remTEComp(inputs[i]);
+	addTEComp(outputs[i], inputs[i] * 2, 6000);
 }

@@ -1,4 +1,4 @@
-import mods.thermalexpansion.Compactor.addPressRecipe as add;
+import crafttweaker.item.IItemStack;
 
 // Silicon Armor Plating
-add(<simplyjetpacks:metaitemmods:12>, <appliedenergistics2:material:5> * 4, 4000);
+addTEComp(<simplyjetpacks:metaitemmods:12>, <appliedenergistics2:material:5> * 4, 4000);
