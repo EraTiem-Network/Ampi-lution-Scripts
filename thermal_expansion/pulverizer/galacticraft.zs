@@ -39,4 +39,4 @@ addTEPulv(<galacticraftplanets:basic_item_venus:4>, <galacticraftplanets:venus:1
 /* Asteroids */
 
 // Ilmenite Ore
-addTEPulv(<galacticraftplanets:item_basic_asteroids:9>, <galacticraftplanets:asteroids_block:4>, 4000, <thermalfoundation:material:0>, 100);
+addTEPulvSec(<galacticraftplanets:item_basic_asteroids:9>, <galacticraftplanets:asteroids_block:4>, 4000, <thermalfoundation:material:0>, 100);

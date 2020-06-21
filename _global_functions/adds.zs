@@ -1,5 +1,6 @@
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
+import crafttweaker.recipes.IRecipeFunction;
 import mods.appliedenergistics2.Inscriber;
 import mods.appliedenergistics2.Grinder;
 import mods.avaritia.ExtremeCrafting;
@@ -20,9 +21,9 @@ global addShaped as function(string, IItemStack, IIngredient[][])void = function
 	recipes.addShaped(name, out, inp);
 };
 
-// Crafting Table Shaped with Function and Action
-global addShapedFunc as function(string, IItemStack, IIngredient[][], IRecipeFunction, IRecipeAction)void = function (name as string, output as IItemStack, input as IIngredient[][], func as IRecipeFuction, act as IRecipeAction) as void {
-	recipes.addShaped(name, out, inp, func, act);
+// Crafting Table Shaped with Function
+global addShapedFunc as function(string, IItemStack, IIngredient[][], IRecipeFunction)void = function (name as string, output as IItemStack, input as IIngredient[][], func as IRecipeFunction) as void {
+	recipes.addShaped(name, output, input, func, null);
 };
 
 // Crafting Table Shapeless
@@ -37,7 +38,7 @@ global addFur as function(IItemStack, IItemStack)void = function (output as IIte
 
 // Furnace Fuel
 global addFurFuel as function(IItemStack, int)void = function (input as IItemStack, burnTime as int) as void {
-	furnace.setFuel(input, int);
+	furnace.setFuel(input, burnTime);
 };
 
 
@@ -115,7 +116,12 @@ global addTEPulv as function(IItemStack, IItemStack, int)void = function (output
 	Pulverizer.addRecipe(output, input, energy);	
 };
 
+// Pulverizer with Secondary Output
+global addTEPulvSec as function(IItemStack, IItemStack, int, IItemStack, int)void = function (output as IItemStack, input as IItemStack, energy as int, secondary as IItemStack, chance as int) as void {
+	Pulverizer.addRecipe(output, input, energy, secondary, chance);	
+};
+
 // Redstone Furnace
 global addTERedFur as function(IItemStack, IItemStack, int)void = function (output as IItemStack, input as IItemStack, energy as int) as void {
-	RedstoneFurnace.addRecipe(output, intput, energy);
+	RedstoneFurnace.addRecipe(output, input, energy);
 };

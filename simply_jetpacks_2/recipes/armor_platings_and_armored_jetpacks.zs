@@ -65,7 +65,6 @@ for i in 0 to 8 {
         ], 
         function(out, ins, cInfo) {
             return out.withTag(ins.mark.tag);
-        },
-        null
+        }
     );
 }

@@ -43,10 +43,10 @@ addTEPulv(<appliedenergistics2:material:5> * 4, <galaxyspace:europablocks:4>, 40
 /* Ganymede */
 
 // Ilmenite Ore
-addTEPulv(<galacticraftplanets:item_basic_asteroids:9>, <galaxyspace:ganymedeblocks:3>, 4000, <thermalfoundation:material:0>, 100);
+addTEPulvSec(<galacticraftplanets:item_basic_asteroids:9>, <galaxyspace:ganymedeblocks:3>, 4000, <thermalfoundation:material:0>, 100);
 
 
 /* Miranda */
 
 // Quartz Ore
-addTEPulv(<minecraft:quartz> * 3, <galaxyspace:mirandablocks:6>, 4000, <thermalfoundation:material:771>, 15);
+addTEPulvSec(<minecraft:quartz> * 3, <galaxyspace:mirandablocks:6>, 4000, <thermalfoundation:material:771>, 15);

@@ -3,7 +3,7 @@ import crafttweaker.item.IItemStack;
 
 /* Adjust all plate recipes to 2 inputs */
 
-remTECom(<extrautils2:ingredients:0>);
+remTEComp(<extrautils2:ingredients:0>);
 
 val inputs = [
 <appliedenergistics2:material:10>,
