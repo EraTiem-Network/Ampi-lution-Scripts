@@ -1,6 +1,5 @@
-import crafttweaker.oredict.IOreDictEntry;
-import crafttweaker.events.IEventManager;
 import crafttweaker.item.IItemStack;
+import crafttweaker.oredict.IOreDictEntry;
 
 // OreBlock OreDict
 var ore = <ore:oreCobalt> as IOreDictEntry;
