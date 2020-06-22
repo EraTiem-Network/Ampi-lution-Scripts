@@ -1,40 +1,39 @@
 import crafttweaker.item.IItemStack;
 import crafttweaker.oredict.IOreDictEntry;
 
-// OreBlock OreDict
-var ore = <ore:oreCobalt> as IOreDictEntry;
-var items = [<galaxyspace:mirandablocks:7>, <galaxyspace:barnarda_c_ores:11>] as IItemStack[];
 
-for i in items {
-	if (!(ore has i)) {
-		ore.add(i);
-	} else {
-		print(ore.name ~ " already has " ~ i.name);
-	}
-}
+/* Ore */
 
+// OreDict
+<ore:oreCobalt>.add(<galaxyspace:mirandablocks:7>);
+<ore:oreCobalt>.add(<galaxyspace:barnarda_c_ores:11>);
 <ore:oreCobaltum>.remove(<galaxyspace:barnarda_c_ores:11>);
 
 
-// Remove Others from OreDict
-<ore:ingotCobalt>.remove(<galaxyspace:ingots:0>);
-
-
-// Remove/Add Recipes
-rem(<galaxyspace:decoblocks:4>);
-<ore:blockCobalt>.add(<galaxyspace:decoblocks:4>);
-remByName("chisel:uncraft_blockcobalt");
-
-remAndHide(<galaxyspace:ingots:0>);
-
-// Remove SAG Mill recipe
-remEnderSAG(<galaxyspace:gsores:0>);
+// Ender SAG Mill
+remEnderSAG(<galaxyspace:gsores:0>)
 
 
 /* Ingot */
 
-// Remove GalaxySpace Ingot from Furnace
+// OreDict
+<ore:ingotCobalt>.remove(<galaxyspace:ingots:0>);
+
+// Recipes
+replAll(<galaxyspace:ingots:0>, <tconstruct:ingots:0>);
+
+// Furnace
 remFur(<galaxyspace:ingots:0>);
 
-// Replace all Ingots
-replAll(<galaxyspace:ingots:0>, <tconstruct:ingots:0>);
+// Remove and Hide
+remAndHide(<galaxyspace:ingots:0>);
+
+
+/* Block */
+
+// OreDict
+<ore:blockCobalt>.add(<galaxyspace:decoblocks:4>);
+
+// Recipes
+rem(<galaxyspace:decoblocks:4>);
+remByName("chisel:uncraft_blockcobalt");

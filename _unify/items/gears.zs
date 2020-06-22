@@ -1,3 +1,6 @@
+import crafttweaker.item.IItemStack;
+
+
 /* Thermal Foundation */
 
 /* TO-DO !!! */

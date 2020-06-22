@@ -1,4 +1,6 @@
-/* Block of Charcoal -> Using that one from Forestry */
+import crafttweaker.item.IItemStack;
 
-recipes.remove(<thermalfoundation:storage_resource:0>);
-mods.jei.JEI.removeAndHide(<thermalfoundation:storage_resource:0>);
+/* Item */
+
+// Recipes and Hide
+remAndHide(<thermalfoundation:storage_resource:0>);

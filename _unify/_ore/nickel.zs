@@ -4,7 +4,7 @@ import crafttweaker.oredict.IOreDictEntry;
 
 /* Ore */
 
-// Ore
+// OreDict
 <ore:oreNickel>.add(<galaxyspace:mirandablocks:8>);
 
 

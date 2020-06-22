@@ -45,6 +45,9 @@ rem(<galacticraftcore:basic_block_core:9>);
 
 /* Dust */
 
+// OreDict
 <ore:dustCopper>.remove(<enderio:item_material:26>);
+
+// Recipes
 replAll(<enderio:item_material:26>, <thermalfoundation:material:64>);
 remAndHide(<enderio:item_material:26>);

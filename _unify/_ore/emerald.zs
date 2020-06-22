@@ -1,5 +1,7 @@
 import crafttweaker.oredict.IOreDictEntry;
 import crafttweaker.item.IItemStack;
 
-// Add missing Ores to OreDict
+/* Ore */
+
+// OreDict
 <ore:oreEmerald>.add(<galaxyspace:titanblocks:4>);

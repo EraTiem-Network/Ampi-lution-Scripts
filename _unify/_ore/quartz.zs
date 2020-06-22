@@ -1,5 +1,7 @@
 import crafttweaker.oredict.IOreDictEntry;
 import crafttweaker.item.IItemStack;
 
-// add missing to OreDict
+/* Ore */
+
+// OreDict
 <ore:oreQuartz>.add(<galaxyspace:mirandablocks:6>);
