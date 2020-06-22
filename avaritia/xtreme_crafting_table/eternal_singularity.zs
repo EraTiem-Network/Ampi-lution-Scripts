@@ -1,7 +1,9 @@
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
-// ReCreate Ethernal Singularity Recipe
+/* Item */
+
+// Xtreme Crafting Table
 addAvaXtrShapeless("eternal_singularity", <eternalsingularity:eternal_singularity>, [
 	<avaritia:singularity:0>, <avaritia:singularity:1>, <avaritia:singularity:2>, <avaritia:singularity:3>, <avaritia:singularity:4>, <avaritia:singularity:10>, <avaritia:singularity:11>, <avaritia:singularity:5>, <avaritia:singularity:6>,
 	<avaritia:singularity:7>, <avaritia:singularity:8>, <avaritia:singularity:9>, <avaritia:singularity:13>, <avaritia:singularity:14>, <jaopca:item_singularityaluminium>, <jaopca:item_singularityardite>, <jaopca:item_singularitycarbon>, <jaopca:item_singularitycobalt>,

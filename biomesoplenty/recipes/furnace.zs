@@ -1,4 +1,7 @@
 import crafttweaker.item.IItemStack;
 
-// Set Bramble as Fuel, because it seems like it can be bourned
+
+/* Bramble */
+
+// Furnace
 addFurFuel(<biomesoplenty:bramble_plant>, 400);
