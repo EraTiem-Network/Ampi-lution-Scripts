@@ -1,11 +1,15 @@
 import crafttweaker.item.IItemStack;
 
-// Remove Wooden Gear -> using that one from Thermal Foundation instead
-rem(<appliedenergistics2:material:40>);
+
+/* Wooden Gear */
+
+// Recipes and Hide
 remAndHide(<appliedenergistics2:material:40>);
 
-// Nether Quarz Dust with Petrotheum Dust
-rem(<appliedenergistics2:material:3>);
+
+/* Nether Quarz Dust */
+
+// Recipes and Hide
 remAndHide(<appliedenergistics2:material:3>);
 
 
