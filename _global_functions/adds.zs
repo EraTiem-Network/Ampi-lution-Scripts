@@ -1,5 +1,6 @@
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
+import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.recipes.IRecipeFunction;
 import mods.appliedenergistics2.Inscriber;
 import mods.appliedenergistics2.Grinder;
@@ -12,6 +13,7 @@ import mods.thermalexpansion.Compactor;
 import mods.thermalexpansion.InductionSmelter;
 import mods.thermalexpansion.Pulverizer;
 import mods.thermalexpansion.RedstoneFurnace;
+import mods.thermalexpansion.Transposer;
 
 
 /* Vanilla */
@@ -104,6 +106,11 @@ global addGalaComp6Inp as function(IItemStack, IItemStack, IItemStack, IItemStac
 // Compactor
 global addTEComp as function(IItemStack, IItemStack, int)void = function (out as IItemStack, inp as IItemStack, energy as int) as void {
 	Compactor.addStorageRecipe(out, inp, energy);
+};
+
+// Fluid Transposer - Fill
+global addTEFlTrFill as function(IItemStack, IItemStack, ILiquidStack, int)void = function (output as IItemStack, input as IItemStack, fluid as ILiquidStack, energy as int) as void {
+	Transposer.addFillRecipe(output, input, fluid, energy);
 };
 
 // Induction Smelter
