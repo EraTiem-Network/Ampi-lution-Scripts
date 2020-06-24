@@ -1,4 +1,5 @@
 import crafttweaker.item.IItemStack;
+import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.oredict.IOreDictEntry;
 
 
@@ -11,7 +12,7 @@ import crafttweaker.oredict.IOreDictEntry;
 
 
 // Ender SAG Mill
-remEnderSAG(<galaxyspace:gsores:0>)
+remEnderSAG(<galaxyspace:gsores:0>);
 
 
 /* Ingot */
