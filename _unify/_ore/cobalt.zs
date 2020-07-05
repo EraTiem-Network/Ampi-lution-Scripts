@@ -1,3 +1,5 @@
+import crafttweaker.block.IBlock;
+import crafttweaker.block.IBlockDefinition;
 import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.oredict.IOreDictEntry;
@@ -10,6 +12,10 @@ import crafttweaker.oredict.IOreDictEntry;
 <ore:oreCobalt>.add(<galaxyspace:barnarda_c_ores:11>);
 <ore:oreCobaltum>.remove(<galaxyspace:barnarda_c_ores:11>);
 
+// Mining Lvl
+<galaxyspace:gsores:0>.asBlock().definition.setHarvestLevel("pickaxe", 4);
+<galaxyspace:mirandablocks:7>.asBlock().definition.setHarvestLevel("pickaxe", 4);
+<galaxyspace:barnarda_c_ores:11>.asBlock().definition.setHarvestLevel("pickaxe", 4);
 
 // Ender SAG Mill
 remEnderSAG(<galaxyspace:gsores:0>);
