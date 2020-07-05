@@ -14,6 +14,7 @@ import crafttweaker.block.IBlock;
 // Recipes and Hide
 replAll(<galacticraftcore:basic_item:2>, <appliedenergistics2:material:5>);
 replAll(<enderio:item_material:5>, <appliedenergistics2:material:5>);
+addShapeless("silicon_block_to_silicon", <appliedenergistics2:material:5> * 9, [<galacticraftcore:basic_block_core:13>] as IItemStack[]);
 remAndHide(<galacticraftcore:basic_item:2>);
 remAndHide(<simplyjetpacks:metaitemmods:12>);
 
