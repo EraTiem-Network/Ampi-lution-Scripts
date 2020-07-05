@@ -44,3 +44,9 @@ remAndHide(<galaxyspace:ingots:0>);
 // Recipes
 rem(<galaxyspace:decoblocks:4>);
 remByName("chisel:uncraft_blockcobalt");
+
+
+/* Plate */
+
+// Display Name
+<galaxyspace:compressed_plates:1>.displayName = "Cobalt Plate";

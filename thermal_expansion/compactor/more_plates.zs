@@ -68,7 +68,7 @@ val outputs = [
 <moreplates:nether_quartz_plate>,
 <moreplates:redstone_plate>,
 <moreplates:ardite_plate>,
-<moreplates:cobalt_plate>,
+<galaxyspace:compressed_plates:1>,
 <moreplates:knightslime_plate>,
 <moreplates:manyullyn_plate>,
 <moreplates:pig_iron_plate>] as IItemStack[];
