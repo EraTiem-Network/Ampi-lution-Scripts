@@ -22,7 +22,9 @@ remAndHide(<simplyjetpacks:metaitemmods:12>);
 remFur(<galacticraftcore:basic_item:2>);
 addFur(<appliedenergistics2:material:5>, <appliedenergistics2:material:2>);
 addFur(<appliedenergistics2:material:5>, <appliedenergistics2:material:3>);
-addFur(<appliedenergistics2:material:5>, <ore:oreSilicon>);
+for item in <ore:oreSilicon>.items {
+	addFur(<appliedenergistics2:material:5>, item);
+}
 
 // Block Drops
 
