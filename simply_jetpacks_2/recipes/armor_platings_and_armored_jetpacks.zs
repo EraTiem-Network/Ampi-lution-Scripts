@@ -4,32 +4,25 @@ import crafttweaker.item.IItemStack;
 /* Change Armore Platings to More Plates's or Thermal Foundation's Plates */
 
 // Conductive Iron
-remAndHide(<simplyjetpacks:metaitemmods:13>);
-replAll(<simplyjetpacks:metaitemmods:13>, <moreplates:conductive_iron_plate>);
+replAll(<simplyjetpacks:metaitemmods:4>, <moreplates:conductive_iron_plate>);
 
 // Electrical Steel
-remAndHide(<simplyjetpacks:metaitemmods:14>);
-replAll(<simplyjetpacks:metaitemmods:14>, <moreplates:electrical_steel_plate>);
+replAll(<simplyjetpacks:metaitemmods:5>, <moreplates:electrical_steel_plate>);
 
 // Dark Steel
-remAndHide(<simplyjetpacks:metaitemmods:15>);
-replAll(<simplyjetpacks:metaitemmods:15>, <moreplates:dark_steel_plate>);
+replAll(<simplyjetpacks:metaitemmods:6>, <moreplates:dark_steel_plate>);
 
 // Iron
-remAndHide(<simplyjetpacks:metaitemmods:22>);
-replAll(<simplyjetpacks:metaitemmods:22>, <thermalfoundation:material:32>);
+replAll(<simplyjetpacks:metaitemmods:16>, <thermalfoundation:material:32>);
 
 // Bronze
-remAndHide(<simplyjetpacks:metaitemmods:23>);
-replAll(<simplyjetpacks:metaitemmods:23>, <thermalfoundation:material:355>);
+replAll(<simplyjetpacks:metaitemmods:17>, <thermalfoundation:material:355>);
 
 // Invar
-remAndHide(<simplyjetpacks:metaitemmods:24>);
-replAll(<simplyjetpacks:metaitemmods:24>, <thermalfoundation:material:354>);
+replAll(<simplyjetpacks:metaitemmods:18>, <thermalfoundation:material:354>);
 
 // Enderium
-remAndHide(<simplyjetpacks:metaitemmods:25>);
-replAll(<simplyjetpacks:metaitemmods:25>, <thermalfoundation:material:359>);
+replAll(<simplyjetpacks:metaitemmods:19>, <thermalfoundation:material:359>);
 
 /* New Armored Recipes */
 
