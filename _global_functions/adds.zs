@@ -33,13 +33,23 @@ global addShapeless as function(string, IItemStack, IIngredient[])void = functio
 	recipes.addShapeless(name, out, inp);
 };
 
+// Crafting Table Shapeless with Action
+// global addShapelessAct as function(string, IItemStack, IIngredient[], IRecipeFunction)void = function (name as string, out as IItemStack, inp as IIngredient[], act as IRecipeFunction) as void {
+//	recipes.addShapeless(name, out, inp, function(out, ins, cInfo) { return out; }, act);
+// };
+
+// Crafting Table Shapeless with Function
+global addShapelessFunc as function(string, IItemStack, IIngredient[], IRecipeFunction)void = function (name as string, out as IItemStack, inp as IIngredient[], func as IRecipeFunction) as void {
+	recipes.addShapeless(name, out, inp, func, null);
+};
+
 // Furnace
-global addFur as function(IItemStack, IItemStack)void = function (output as IItemStack, input as IItemStack) as void {
+global addFur as function(IItemStack, IIngredient)void = function (output as IItemStack, input as IIngredient) as void {
 	furnace.addRecipe(output, input);	
 };
 
 // Furnace Fuel
-global addFurFuel as function(IItemStack, int)void = function (input as IItemStack, burnTime as int) as void {
+global addFurFuel as function(IIngredient, int)void = function (input as IIngredient, burnTime as int) as void {
 	furnace.setFuel(input, burnTime);
 };
 

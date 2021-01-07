@@ -116,14 +116,12 @@ global remGalaComp as function(IItemStack)void = function (output as IItemStack)
 /* Just Enough Items */
 
 // Remove and hide without NBT
-global remAndHide as function(IItemStack)void = function (item as IItemStack) as void {
-	rem(item);
-	JEI.hide(item);
+global remAndHide as function(IIngredient)void = function (item as IIngredient) as void {
+	JEI.removeAndHide(item);
 };
 
 // Remove and hide with NBT
-global remAndHideNBT as function(IItemStack)void = function(item as IItemStack) as void {
-	remNBT(item);
+global remAndHideNBT as function(IIngredient)void = function(item as IIngredient) as void {
 	JEI.removeAndHide(item, true);
 };
 
