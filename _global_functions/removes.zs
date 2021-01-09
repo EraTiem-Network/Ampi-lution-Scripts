@@ -118,12 +118,14 @@ global remGalaComp as function(IItemStack)void = function (output as IItemStack)
 
 // Remove and hide without NBT
 global remAndHide as function(IIngredient)void = function (item as IIngredient) as void {
+	item.addTooltip(format.red("§cThis Item was removed!\n\nIt's not intendent to be used in this Modpack!"));
 	JEI.removeAndHide(item);
 };
 
 // Remove and hide with NBT
 global remAndHideNBT as function(IIngredient)void = function(item as IIngredient) as void {
 	JEI.removeAndHide(item, true);
+	item.addTooltip(format.red("§cThis Item was removed!\n\nIt's not intendent to be used in this Modpack!"));
 };
 
 

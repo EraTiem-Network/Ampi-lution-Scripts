@@ -15,5 +15,6 @@ global replAll as function(IIngredient, IIngredient)void = function (item as IIn
 
 // hide
 global hide as function(IItemStack)void = function (item as IItemStack) as void {
+	item.addTooltip(format.red("§cThis Item was removed!\n\nIt's not intendent to be used in this Modpack!"));
 	JEI.hide(item);	
 };
