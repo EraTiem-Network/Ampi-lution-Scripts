@@ -6,9 +6,6 @@ import crafttweaker.item.IItemStack;
 // Cobalt Ore
 addTEPulv(<tconstruct:ingots:0>, <galaxyspace:gsores:0>, 4000);
 
-// Uranium Ore
-addTEPulv(<galaxyspace:gs_basic:15>, <galaxyspace:gsores:2>, 4000);
-
 
 /* Mercury */
 
