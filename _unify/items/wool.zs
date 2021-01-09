@@ -14,12 +14,24 @@ for item in <ore:blockWool>.items {
 
 <ore:blockWool>.removeItems(<ore:blockWool>.items);
 
+/* New quiltedWool OreDict */
+
+<ore:quiltedWool>.addItems([<quark:quilted_wool:0>, <quark:quilted_wool:1>,
+							<quark:quilted_wool:2>, <quark:quilted_wool:3>,
+							<quark:quilted_wool:4>, <quark:quilted_wool:5>,
+							<quark:quilted_wool:6>, <quark:quilted_wool:7>,
+							<quark:quilted_wool:8>, <quark:quilted_wool:9>,
+							<quark:quilted_wool:10>, <quark:quilted_wool:11>,
+							<quark:quilted_wool:12>, <quark:quilted_wool:13>,
+							<quark:quilted_wool:14>, <quark:quilted_wool:15>]);
+
+
 /* New coloredWool OreDict */
 <ore:coloredWool>.addAll(<ore:wool>);
-<ore:coloredWool>.removeItems([<minecraft:wool:0>, <chisel:wool_white:0>, <chisel:wool_white:1>]);
+<ore:coloredWool>.removeItems([<minecraft:wool:0>, <chisel:wool_white:0>, <chisel:wool_white:1>, <quark:quilted_wool:0>]);
 
 
-/* blockWool to Wool */
+/* blockWool to Wool | Add Chisel and Quilted Wool */
 
 function replWool(fromDict as IOreDictEntry, toDict as IOreDictEntry) {
 	replAll(fromDict, toDict);
@@ -29,7 +41,7 @@ function replWool(fromDict as IOreDictEntry, toDict as IOreDictEntry) {
 
 // White
 replWool(<ore:blockWoolWhite>, <ore:woolWhite>);
-<ore:woolWhite>.addItems([<chisel:wool_white:0>, <chisel:wool_white:1>]);
+<ore:woolWhite>.addItems([<chisel:wool_white:0>, <chisel:wool_white:1>, ]);
 replAll(<minecraft:wool:0>, <ore:woolWhite>);
 
 // Orange
@@ -108,4 +120,54 @@ replWool(<ore:blockWoolBlack>, <ore:woolBlack>);
 replAll(<minecraft:wool:15>, <ore:woolBlack>);
 
 
-/* TO-DO: Machines */
+/* Furnace: All Wool as Fuel */
+
+addFurFuel(<ore:wool>, 100);
+
+
+/* Pulverizer and SAG Mill */
+
+val mcWools = [	<minecraft:wool:0>, <minecraft:wool:1>, <minecraft:wool:2>,
+				<minecraft:wool:3>, <minecraft:wool:4>, <minecraft:wool:5>,
+				<minecraft:wool:6>, <minecraft:wool:7>, <minecraft:wool:8>,
+				<minecraft:wool:9>, <minecraft:wool:10>, <minecraft:wool:11>,
+				<minecraft:wool:12>, <minecraft:wool:13>, <minecraft:wool:14>,
+				<minecraft:wool:15>] as IItemStack[];
+val oreColorWool = [<ore:woolWhite>, <ore:woolOrange>, <ore:woolMagenta>,
+					<ore:woolLightBlue>, <ore:woolYellow>, <ore:woolGreen>,
+					<ore:woolPink>, <ore:woolGray>, <ore:woolLightGray>,
+					<ore:woolCyan>, <ore:woolPurple>, <ore:woolBlue>,
+					<ore:woolBrown>, <ore:woolGreen>, <ore:woolRed>,
+					<ore:woolBlack>] as IOreDictEntry[];
+val pigmentColors = [	<thermalfoundation:dye:15>, <thermalfoundation:dye:14>,
+						<thermalfoundation:dye:13>, <thermalfoundation:dye:12>,
+						<thermalfoundation:dye:11>, <thermalfoundation:dye:10>,
+						<thermalfoundation:dye:9>, <thermalfoundation:dye:8>,
+						<thermalfoundation:dye:7>, <thermalfoundation:dye:6>,
+						<thermalfoundation:dye:5>, <thermalfoundation:dye:4>,
+						<thermalfoundation:dye:3>, <thermalfoundation:dye:2>,
+						<thermalfoundation:dye:1>, <thermalfoundation:dye:0>
+					] as IItemStack[];
+
+remEnderSAG(<minecraft:wool:0>);
+
+for i in 0 to 16 {
+	remTEPulv(mcWools[i]);
+	for item in oreColorWool[i].items {
+		addTEPulvSec(<minecraft:string> * 4, item, 3000, pigmentColors[i], 15);
+	}
+	addEnderSAG([(<minecraft:string> * 3) .weight(1), <minecraft:string>.weight(0.1), pigmentColors[i].weight(0.15)], oreColorWool[i], "CHANCE_ONLY", 1200);
+
+	remTEPulv(<ore:quiltedWool>.items[i]);
+	addTEPulvSec(<minecraft:string> * 4, <ore:quiltedWool>.items[i], 3000, pigmentColors[i], 15);
+	addEnderSAG([(<minecraft:string> * 3) .weight(1), <minecraft:string>.weight(0.1), pigmentColors[i].weight(0.15)], <ore:quiltedWool>.items[i], "CHANCE_ONLY", 1200);
+}
+
+
+/* Alloy Smelter */
+
+remEnderAlSm(<enderio:block_industrial_insulation:0>);
+addEnderAlSm(<enderio:block_industrial_insulation:0>, [<enderio:item_material:32>, <ore:woolWhite>, <thermalfoundation:material:65>], 5000, 0);
+
+// Galaticraft Red Wool... Sadly there is no CT way to edit that. Let me know if you found a CT possibility to edit this.  :)
+// GalacticraftTweaker, NASATweaker and GalaxySpace's integration of CT do not hava a Function to edit NASA Workbench Recipes :/
