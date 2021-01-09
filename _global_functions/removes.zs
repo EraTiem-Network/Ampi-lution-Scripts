@@ -11,6 +11,7 @@ import mods.jei.JEI;
 import mods.GalacticraftTweaker as GC;
 import mods.thermalexpansion.Compactor;
 import mods.thermalexpansion.InductionSmelter;
+import mods.thermalexpansion.Pulverizer;
 
 
 /* Vanilla */
@@ -136,4 +137,9 @@ global remTEComp as function(IItemStack)void = function (item as IItemStack) as 
 // Induction Smelter
 global remTEInSm as function(IItemStack, IItemStack)void = function (item1 as IItemStack, item2 as IItemStack) as void {
 	InductionSmelter.removeRecipe(item1, item2);
+};
+
+// Pulverizer
+global remTEPulv as function(IItemStack)void = function (item as IItemStack) as void {
+	Pulverizer.removeRecipe(item);
 };

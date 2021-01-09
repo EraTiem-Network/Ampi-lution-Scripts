@@ -1,5 +1,6 @@
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
+import crafttweaker.item.WeightedItemStack;
 import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.recipes.IRecipeFunction;
 import mods.appliedenergistics2.Inscriber;
@@ -7,6 +8,7 @@ import mods.appliedenergistics2.Grinder;
 import mods.avaritia.ExtremeCrafting;
 import mods.chisel.Carving;
 import mods.enderio.AlloySmelter;
+import mods.enderio.SagMill;
 import mods.enderio.SliceNSplice;
 import mods.GalacticraftTweaker as GC;
 import mods.thermalexpansion.Compactor;
@@ -92,6 +94,11 @@ global addEnderAlSm as function(IItemStack, IIngredient[], int, float)void = fun
 // Slice'N'Splice
 global addEnderSNS as function(IItemStack, IIngredient[], int, float)void = function (out as IItemStack, ins as IIngredient[], energy as int, xp as float) as void {
 	SliceNSplice.addRecipe(out, ins, energy, xp);
+};
+
+// SAG Mill
+global addEnderSAG as function(WeightedItemStack[], IIngredient, string, int)void = function (out as WeightedItemStack[], input as IIngredient, bonusType as string, energy as int) as void {
+	SagMill.addRecipe(out, input, bonusType, energy);
 };
 
 
