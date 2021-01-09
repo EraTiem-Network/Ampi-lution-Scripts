@@ -28,9 +28,7 @@ replAll(<galacticraftcore:basic_item:5>, <thermalfoundation:material:132>);
 // Furnace
 remFur(<galacticraftcore:basic_item:5>);
 remFur(<thermalfoundation:material:132>);
-for item in <ore:oreAluminum>.items {
-	addFur(<thermalfoundation:material:132>, item);
-}
+addFur(<thermalfoundation:material:132>, <ore:oreAluminum>);
 addFur(<thermalfoundation:material:132>, <moreplanets:fronos_aluminum_ore>);
 addFur(<thermalfoundation:material:132>, <moreplanets:diona_aluminum_ore>);
 addFur(<thermalfoundation:material:132>, <moreplanets:chalos_aluminum_ore>);

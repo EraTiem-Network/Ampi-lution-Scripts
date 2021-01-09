@@ -17,9 +17,7 @@ replAll(<galacticraftcore:basic_item:3>, <thermalfoundation:material:128>);
 // Furnace
 remFur(<forestry:ingot_copper>);
 remFur(<galacticraftcore:basic_item:3>);
-for ore in <ore:oreCopper>.items {
-	addFur(<thermalfoundation:material:128>, ore);	
-}
+addFur(<thermalfoundation:material:128>, <ore:oreCopper>);
 
 // Furnace More Planets...
 remFurIn(<galacticraftcore:basic_item:3>, <moreplanets:fronos_copper_ore>);

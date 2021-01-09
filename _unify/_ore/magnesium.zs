@@ -17,9 +17,7 @@ replAll(<galaxyspace:ingots:1>, <extraplanets:tier6_items:5>);
 // Furnace
 remFur(<galaxyspace:ingots:1>);
 remFur(<extraplanets:tier6_items:5>);
-for item in <ore:oreMagnesium>.items {
-  	addFur(<extraplanets:tier6_items:5>, item);
-}
+addFur(<extraplanets:tier6_items:5>, <ore:oreMagnesium>);
 
 
 /* Blocks */

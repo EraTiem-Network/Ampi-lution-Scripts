@@ -14,9 +14,7 @@ replAll(<extraplanets:tier11_items:5>, <thermalfoundation:material:134>);
 // Furnace
 remFur(<extraplanets:tier11_items:5>);
 remFur(<thermalfoundation:material:134>);
-for item in <ore:orePlatinum>.items {
-	addFur(<thermalfoundation:material:134>, item);
-}
+addFur(<thermalfoundation:material:134>, <ore:orePlatinum>);
 
 // AE2 Grindestone
 remAE2Gri(<extraplanets:tier11_items:5>);

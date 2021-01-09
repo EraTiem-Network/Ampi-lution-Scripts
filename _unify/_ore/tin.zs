@@ -21,9 +21,7 @@ replAll(<galacticraftcore:basic_item:4>, <thermalfoundation:material:129>);
 remFur(<forestry:ingot_tin>);
 remFur(<galacticraftcore:basic_item:4>);
 remFur(<thermalfoundation:material:129>);
-for item in <ore:oreTin>.items {
-	addFur(<thermalfoundation:material:129>, item);
-}
+addFur(<thermalfoundation:material:129>, <ore:oreTin>);
 addFur(<thermalfoundation:material:129>, <moreplanets:diona_tin_ore>);
 addFur(<thermalfoundation:material:129>, <moreplanets:infected_tin_ore>);
 addFur(<thermalfoundation:material:129>, <moreplanets:chalos_tin_ore>);

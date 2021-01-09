@@ -23,9 +23,7 @@ replAll(<galaxyspace:ingots:2>, <thermalfoundation:material:133>);
 // Furnace
 remFur(<extraplanets:tier5_items:7>);
 remFur(<galaxyspace:ingots:2>);
-for item in <ore:oreNickel>.items {
-	addFur(<thermalfoundation:material:133>, item);
-}
+addFur(<thermalfoundation:material:133>, <ore:oreNickel>);
 
 // AE2 Grindstone
 remAE2Gri(<extraplanets:tier5_items:7>);
