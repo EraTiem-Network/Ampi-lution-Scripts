@@ -16,5 +16,4 @@ remAndHide(<appliedenergistics2:material:3>);
 /* Unusable Panels */
 
 // RFTools Machine Frame
-remNBT(<appliedenergistics2:facade:0>.withTag({damage: 0, item: "rftools:machine_frame"}));
 remAndHideNBT(<appliedenergistics2:facade:0>.withTag({damage: 0, item: "rftools:machine_frame"}));
