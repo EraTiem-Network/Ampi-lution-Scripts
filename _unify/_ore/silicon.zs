@@ -1,3 +1,4 @@
+#ikwid
 import crafttweaker.oredict.IOreDictEntry;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
@@ -10,13 +11,28 @@ import crafttweaker.block.IBlock;
 // OreDict
 <ore:itemSilicon>.remove(<galacticraftcore:basic_item:2>);
 <ore:itemSilicon>.remove(<enderio:item_material:5>);
+<ore:itemSilicon>.remove(<projectred-core:resource_item:301>);
 
 // Recipes and Hide
-replAll(<galacticraftcore:basic_item:2>, <appliedenergistics2:material:5>);
-replAll(<enderio:item_material:5>, <appliedenergistics2:material:5>);
-addShapeless("silicon_block_to_silicon", <appliedenergistics2:material:5> * 9, [<galacticraftcore:basic_block_core:13>] as IItemStack[]);
 remAndHide(<galacticraftcore:basic_item:2>);
 remAndHide(<simplyjetpacks:metaitemmods:12>);
+remAndHide(<projectred-core:resource_item:301>);
+
+replAll(<galacticraftcore:basic_item:2>, <appliedenergistics2:material:5>);
+replAll(<enderio:item_material:5>, <appliedenergistics2:material:5>);
+replAll(<projectred-core:resource_item:301>, <appliedenergistics2:material:5>);
+
+addShapeless("silicon_block_to_silicon", <appliedenergistics2:material:5> * 9, [<galacticraftcore:basic_block_core:13>] as IItemStack[]);
+
+addShapelessFunc("silicon_boule_cut",
+    <appliedenergistics2:material:5> * 8,
+	[<microblockcbe:saw_diamond>.anyDamage().marked("mark"), <projectred-core:resource_item:300>] as IItemStack[],
+	function(out, ins, cInfo) {
+		ins.mark.transformDamage();
+		return out;
+	}
+);
+
 
 // Furnace
 remFur(<galacticraftcore:basic_item:2>);
