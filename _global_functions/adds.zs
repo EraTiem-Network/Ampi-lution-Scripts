@@ -76,6 +76,11 @@ global addAvaXtrShapeless as function(string, IItemStack, IIngredient[])void = f
 	ExtremeCrafting.addShapeless(name, output, inputs);
 };
 
+// Xtreme Crafting Table Shaped
+global addAvaXtrShaped as function(string, IItemStack, IIngredient[][])void = function (name as string, output as IItemStack, inputs as IIngredient[][]) as void {
+	ExtremeCrafting.addShaped(name, output, inputs);
+};
+
 
 /* Chisel */
 
