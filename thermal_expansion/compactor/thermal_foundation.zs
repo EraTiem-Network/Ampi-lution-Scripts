@@ -2,7 +2,7 @@ import crafttweaker.item.IItemStack;
 
 /* Adjust all plate recipes to 2 inputs */
 
-val items {
+val items = {
 	<minecraft:iron_ingot> : <thermalfoundation:material:32>,
 	<minecraft:gold_ingot> : <thermalfoundation:material:33>,
 	<thermalfoundation:material:128> : <thermalfoundation:material:320>,
